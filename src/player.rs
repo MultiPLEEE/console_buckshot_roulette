@@ -1,4 +1,3 @@
-
 pub trait Player {
     fn take_turn(&mut self) -> PlayerChoice;
     fn take_items(&mut self, items: Vec<Item>);
@@ -8,7 +7,7 @@ pub trait Player {
 
 enum PlayerChoice {
     ShootSelf,
-    ShootOther
+    ShootOther,
 }
 
 pub struct DefaultPlayer {
@@ -17,9 +16,7 @@ pub struct DefaultPlayer {
 }
 
 impl Player for DefaultPlayer {
-    fn take_turn(&mut self) -> PlayerChoice {
-        
-    }
+    fn take_turn(&mut self) -> PlayerChoice {}
 
     fn take_items(&mut self, items: Vec<Item>) {
         todo!()
