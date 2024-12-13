@@ -2,5 +2,6 @@
 
 mod game;
 mod player;
+mod items;
 
 fn main() {}
