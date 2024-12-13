@@ -1,4 +1,7 @@
-use crate::{items::{Item, ItemResponse}, player::MAX_ITEMS};
+use crate::{
+    items::{Item, ItemResponse},
+    player::MAX_ITEMS,
+};
 
 pub trait Interface {
     fn take_turn(info: TurnInfo) -> PlayerChoice;
