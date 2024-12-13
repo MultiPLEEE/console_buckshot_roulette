@@ -20,8 +20,23 @@ impl<P1: Player, P2: Player> Game<P1, P2> {
         Self {
             rand: rand::thread_rng(),
             bullets: Vec::new(),
-            player1: new(),
-            player2: new(),
+            player1: P1::new(),
+            player2: P2::new(),
         }
+    }
+    fn turn(&mut self) {
+        let offender = &mut self.player1;
+        let defender = &mut self.player2;
+        let choice = offender.take_turn();
+        let bullet = self.bullets.pop().unwrap();
+        match choice {}
+
+        todo!()
+        // if bullet {
+        //     defender.take_damage(damage);
+        // }
+        // else {
+
+        // }
     }
 }
