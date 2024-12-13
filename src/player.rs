@@ -1,5 +1,6 @@
 
 pub trait Player {
+    fn new() -> Self;
     fn take_turn(&mut self) -> PlayerChoice;
     fn take_items(&mut self, items: Vec<Item>);
     fn take_damage(&mut self, damage: u32);
