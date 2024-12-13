@@ -1,4 +1,4 @@
-use crate::{items::Item, player::MAX_ITEMS};
+use crate::{items::{Item, ItemResponse}, player::MAX_ITEMS};
 
 pub trait Interface {
     fn take_turn(info: TurnInfo) -> PlayerChoice;
@@ -22,13 +22,4 @@ pub struct TurnInfo<'a> {
 
 pub struct StartInfo {
     pub bullets: Vec<bool>,
-}
-
-pub enum ItemResponse {
-    None,
-    Bullet(bool),
-
-    // Delete those if not needed
-    Heal(u32),
-    Damage(u32),
 }
